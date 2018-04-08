@@ -1,0 +1,19 @@
+- config:
+    request:
+        base_url: http://testim.yumimobi.com
+        headers:
+            Cookie: YUMIMOBIUID=eXVtaW2vYmkuY30tMTA6Lk9yNS6PMjAuNzg=
+- test:
+    name: test demo2
+    request:
+        url: /admin/cp
+        method: GET
+    variables:
+        - type: 1,2
+        - id: 1
+        - page: 1
+        - size: 30
+        - tableId: table
+    validate:
+        - eq: ["status_code", 200]
+
