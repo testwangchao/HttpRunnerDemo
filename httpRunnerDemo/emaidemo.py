@@ -2,7 +2,6 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 import os
-import re
 
 
 def send_email(file):
@@ -40,9 +39,9 @@ def send_email(file):
 
 
 def main():
-    for file in os.listdir(os.getcwd() + "/httpRunnerDemo/reports"):
-        if os.path.isfile(os.getcwd() + '/httpRunnerDemo/reports/' + file):
-            html_path = os.getcwd() + "/httpRunnerDemo/reports/" + file
+    for file in os.listdir(os.getcwd() + "/reports"):
+        if os.path.isfile(os.getcwd() + '/reports/' + file):
+            html_path = os.getcwd() + "/reports/" + file
             send_email(html_path)
 
 
