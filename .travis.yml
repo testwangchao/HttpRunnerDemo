@@ -6,4 +6,5 @@ install:
     - pip install HttpRunner
 script:
     - cd httpRunnerDemo
-    - python emaidemo.py
+#    - python emaidemo.py
+    - pwd
