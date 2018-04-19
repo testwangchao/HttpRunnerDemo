@@ -1,6 +1,6 @@
 - config:
     request:
-        base_url: http://testim.yumimobi.com
+        base_url: $base_url
         headers:
             Cookie: YUMIMOBIUID=eXVtaW2vYmkuY30tMTA6Lk9yNS6PMjAuNzg=
 - test:
