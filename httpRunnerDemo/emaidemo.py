@@ -39,11 +39,12 @@ def send_email(file):
 
 
 def main():
-    # for file in os.listdir(os.getcwd() + "/reports"):
-    #     if os.path.isfile(os.getcwd() + '/reports/' + file):
-    #         html_path = os.getcwd() + "/reports/" + file
-    #         send_email(html_path)
-    print(os.getcwd())
+    path = os.getcwd()+"/reports/"
+    for file in os.listdir(path):
+        if os.path.isfile(path + file):
+            html_path = path + file
+            send_email(html_path)
+    # print(os.getcwd())
 
 if __name__ == '__main__':
     main()
