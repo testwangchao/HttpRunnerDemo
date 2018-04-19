@@ -15,7 +15,7 @@ def send_email(file):
     server = "smtp.qq.com"
     # sender data
     username = "937129141"
-    passwd = ""
+    passwd = "jvezcostromebffd"
     # text
     f = open(file, 'rb')
     mail_body = f.read()
