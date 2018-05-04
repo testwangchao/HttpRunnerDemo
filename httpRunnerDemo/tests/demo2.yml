@@ -2,7 +2,7 @@
     request:
         base_url: $base_url
         headers:
-            Cookie: YUMIMOBIUID=eXVtaW2vYmkuY30tMTA6Lk9yNS6PMjAuNzg=
+            Cookie:
 - test:
     name: test demo2
     request:
@@ -15,5 +15,5 @@
         - size: 30
         - tableId: table
     validate:
-        - eq: ["status_code", 200]
+        - eq: ["status_code", 400]
 

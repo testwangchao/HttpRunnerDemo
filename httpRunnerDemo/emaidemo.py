@@ -6,16 +6,16 @@ import os
 
 def send_email(file):
     # 发送邮箱
-    sender = "937129141@qq.com"
+    sender = ""
     # 接受邮箱
-    receiver = "15201403874@163.com"
+    receiver = ""
     # title
     title = "demo"
     # server
     server = "smtp.qq.com"
     # sender data
-    username = "937129141"
-    passwd = "jvezcostromebffd"
+    username = ""
+    passwd = ""
     # text
     f = open(file, 'rb')
     mail_body = f.read()
@@ -39,12 +39,10 @@ def send_email(file):
 
 
 def main():
-    path = os.getcwd()+"/reports/"
+    path = os.path.join(os.getcwd(), "reports")
     for file in os.listdir(path):
-        if os.path.isfile(path + file):
-            html_path = path + file
-            send_email(html_path)
-    # print(os.getcwd())
+        report_path = os.path.join(os.getcwd(), "reports", file)
+        send_email(report_path)
 
 if __name__ == '__main__':
     main()
